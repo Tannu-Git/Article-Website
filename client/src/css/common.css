@@ -1,0 +1,19 @@
+.navbar {
+    backdrop-filter: blur(0px);
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the navbar is above the video */
+}
+
+.navbar-brand img {
+    max-height: 50px;
+}
+
+.nav-link {
+    /* font-family: 'Camar'; */
+    color: #e0e0e0 !important;
+    font-weight: 600;
+}

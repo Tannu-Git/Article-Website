@@ -1,0 +1,173 @@
+body {
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+/* background-color: #f3e5c3; Sandy background color */
+/* background-color: #ffe8b1; Sandy background color */
+/* background: linear-gradient(to bottom, #ffe8b1 0%, #f3e5c3 50%, #d9c4a1 100%);      */
+/* background: linear-gradient(to bottom, #ffe8b1 0%, #f2dca3 50%, #d9c4a1eb 100%);      */
+background: linear-gradient(to bottom, #ffe8b1 0%, #e0c98e 50%, #deb572d4 100%);          
+/* height: 100vh; */
+/* cursor: none; TODO */
+}
+
+.grains {
+position: fixed;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+z-index: -1;
+}
+
+.grain {
+position: absolute;
+border-radius: 50%;
+}
+
+.item {
+position: absolute;
+transform-origin: center;
+}
+.video-background {
+/* position: absolute; */
+top: 0;
+left: 0;
+width: 100%;
+height: 80vh; /* Set height to 50% of the viewport */
+object-fit: cover;
+/* opacity: 0.5; */
+z-index: 2;
+mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Gradient mask to blend with background */
+}
+
+.cursor-video {
+position: absolute;
+width: 150px; /* Adjust the size of the cursor video */
+height: 150px;
+pointer-events: none; /* Ensure the video doesn't interfere with cursor events */
+z-index: 3; /* Ensure the cursor video is above other elements */
+}
+
+
+
+.glass-card {
+position: relative;
+background: rgba(255, 255, 255, 0.2);
+border-radius: 15px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+padding: 20px;
+overflow: hidden;
+}
+
+.glass-card::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(to bottom, rgba(255, 255, 255, 0.126), rgba(255, 255, 255, 0));
+pointer-events: none;
+z-index: 1;
+}
+
+.glass-card .card-header,
+.glass-card .card-body {
+position: relative;
+z-index: 2;
+}
+
+.glass-card .btn {
+background-color: rgba(0, 123, 255, 0.7);
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+color: white;
+text-decoration: none;
+}
+.heading-container h1 {
+    font-family: 'SansLuis';
+    font-size: 7rem; /* Large font size */
+    /* white-space: nowrap; */
+    font-weight: bold; /* Bold text */
+    color: #f0f0f0; /* DarkTurquoise color for a water theme */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Increased shadow for better contrast */
+    animation: fadeOpacity 1.2s ease-in-out; /* Apply the animation */
+
+}
+.tagline {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #d0d0d0; /* Light khaki color */
+    margin-top: 0.5rem;
+    animation: fadeOpacity 1.2s ease-in-out; /* Apply the animation */
+
+}
+
+.heading-container {
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+    z-index: 1; /* Ensure the heading is above the video */
+}
+
+/* card.css */
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    transition: backdrop-filter 0.6s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+    color: black;
+}
+
+.card:hover {
+    backdrop-filter: blur(1.5px);
+    box-shadow: 5px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background: rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    margin-bottom: 15px;
+}
+
+.card-text {
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: rgba(0, 123, 255, 0.7);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.card-body:hover{
+    text-decoration: none;
+
+}
+.card-anchor {
+    text-decoration: none !important;
+}
