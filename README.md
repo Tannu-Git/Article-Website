@@ -1,2 +1,2 @@
 # Article-Website
- Article Website made as a project for DevSoc
+ Article Website made as a practise project
